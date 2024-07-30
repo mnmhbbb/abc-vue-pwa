@@ -9,7 +9,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@vue/cli-plugin-pwa": "^5.0.8",
     "vue": "^3.4.31"
   },
   "devDependencies": {
