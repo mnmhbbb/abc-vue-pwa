@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
-    "moduleResolution": "node",
+    "moduleResolution": "node16",
     "types": ["vite"],
-    "module": "esnext",
+    "module": "Node16",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
     }
-  }
+  },
+  "exclude": ["vite.config.ts"]
 }

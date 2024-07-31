@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Compiled output
+src/**/*.js
+src/**/*.js.map
+
+# Vue component compilation results
+src/**/*.vue.js
