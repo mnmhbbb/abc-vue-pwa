@@ -1,5 +1,5 @@
 <template>
-  <button type="button" @click="handleClick">test</button>
+  <button type="button" @click="handleClick" :disabled="isDisabled">test</button>
   <p>{{ textValue }}</p>
 </template>
 
@@ -7,11 +7,15 @@
 import { onMounted, ref } from 'vue';
 
 const textValue = ref('');
+const isDisabled = ref(false);
 
 const handleClick = () => {
   fetch('https://jsonplaceholder.typicode.com/posts/1')
     .then((response) => response.json())
-    .then((data) => (textValue.value = data.title))
+    .then((data) => {
+      textValue.value = data.title;
+      isDisabled.value = true;
+    })
     .catch((error) => alert(error));
 };
 
